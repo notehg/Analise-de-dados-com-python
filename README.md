@@ -1,129 +1,158 @@
 # Analise-de-dados-com-python
-Dashboard de Análise de Salários na Área de Dados
+📊 Dashboard de Salários na Área de Dados
 
-Este projeto consiste em um dashboard interativo desenvolvido com Streamlit, cujo objetivo é analisar e visualizar dados salariais da área de dados ao longo dos anos, permitindo explorar tendências, distribuições e comparações entre cargos, países e tipos de trabalho.
+Este projeto apresenta um dashboard interativo desenvolvido em Python com Streamlit, voltado para a análise salarial na área de dados.
+O objetivo é permitir a exploração de informações como salário médio, distribuição por cargo, tendências ao longo dos anos, localização geográfica e tipos de trabalho, de forma simples e visual.
 
-O projeto foi desenvolvido com foco em análise exploratória de dados (EDA), visualização interativa e boas práticas de organização de código, sendo ideal para fins de aprendizado, portfólio e demonstração técnica.
+O projeto também serve como exemplo prático de:
 
-🎯 Objetivos do Projeto
+Criação e uso de ambientes virtuais em Python
 
-Analisar a evolução dos salários na área de dados ao longo do tempo
+Organização de dependências com requirements.txt
 
-Comparar salários entre diferentes cargos e senioridades
+Boas práticas para execução de aplicações Streamlit
 
-Identificar padrões geográficos de remuneração
+🎯 Objetivo do Projeto
 
-Avaliar o impacto do trabalho remoto e do tipo de contrato
+Analisar salários na área de dados ao longo do tempo
 
-Criar um dashboard interativo e intuitivo para exploração dos dados
+Comparar cargos e níveis de experiência
 
-🧩 Funcionalidades
+Visualizar distribuições salariais de forma clara
 
-📌 Filtros dinâmicos por:
+Criar um dashboard interativo para análise exploratória
 
-Ano
-
-Senioridade
-
-Tipo de contrato
-
-Tamanho da empresa
-
-📊 Métricas (KPIs):
-
-Salário médio
-
-Salário máximo
-
-Total de registros
-
-Cargo mais frequente
-
-Média salarial por país
-
-📈 Visualizações interativas:
-
-Gráfico de área com evolução salarial ao longo do tempo
-
-Gráfico de barras com os cargos mais bem pagos
-
-Histograma da distribuição salarial
-
-Boxplot da distribuição salarial por cargo
-
-Gráfico de rosca sobre tipos de trabalho (remoto, híbrido, presencial)
-
-Mapa (choropleth) com salário médio de Data Scientists por país
-
-📋 Tabela detalhada com os dados filtrados
+Demonstrar boas práticas de configuração de ambiente Python
 
 🛠️ Tecnologias Utilizadas
 
 Python 3
 
-Streamlit – criação do dashboard interativo
+Streamlit – Interface e dashboard interativo
 
-Pandas – manipulação e análise de dados
+Pandas – Manipulação e análise de dados
 
-Plotly Express – visualizações interativas
+Plotly – Visualizações interativas
 
-Git & GitHub – versionamento e compartilhamento
+Git & GitHub – Versionamento e documentação
 
-📂 Estrutura do Projeto
-├── app.py          # Código principal do dashboard
-├── README.md       # Documentação do projeto
-└── requirements.txt (opcional)
+🧪 Criação do Ambiente Virtual
 
-▶️ Como Executar o Projeto
-1️⃣ Clonar o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+Para evitar conflitos de dependências e garantir um ambiente isolado, é recomendado utilizar um ambiente virtual Python.
 
-2️⃣ Criar e ativar o ambiente virtual
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# Linux / Mac
+🔹 Criar o ambiente virtual
+python3 -m venv .venv
+
+🔹 Ativar o ambiente virtual
+
+O comando varia conforme o sistema operacional.
+
+Windows (PowerShell / VS Code):
+
+.venv\Scripts\Activate
+
+
+Linux / macOS:
+
 source .venv/bin/activate
 
-3️⃣ Instalar as dependências
-pip install streamlit pandas plotly
+⚠️ Observação Importante (Windows)
 
-4️⃣ Executar o dashboard
+O Windows costuma bloquear scripts de execução, o que pode impedir a ativação do ambiente virtual.
+
+Caso isso ocorra, execute o seguinte comando no PowerShell:
+
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+Esse comando libera a execução de scripts locais apenas para o usuário atual.
+
+📦 Gerenciamento de Dependências
+
+Para facilitar a instalação das bibliotecas em qualquer ambiente, o projeto utiliza um arquivo requirements.txt, contendo todas as dependências necessárias.
+
+📄 Exemplo do requirements.txt
+pandas==2.2.3
+streamlit==1.44.1
+plotly==5.24.1
+
+📥 Instalar todas as dependências
+pip install -r requirements.txt
+
+
+O parâmetro -r indica que o pip deve instalar todas as bibliotecas listadas no arquivo.
+
+🧱 Configuração Base da Página (Streamlit)
+
+A configuração inicial do dashboard define o título, ícone e layout da aplicação:
+
+# Configuração básica da página
+st.set_page_config(
+    page_title="Dashboard de Salários na Área de Dados",
+    page_icon="📊",
+    layout="wide",
+)
+
+
+Essa configuração garante:
+
+Layout em tela cheia
+
+Identidade visual consistente
+
+Melhor experiência para análise de dados
+
+▶️ Executando o Projeto
+
+Com o ambiente virtual ativado e as dependências instaladas, execute o projeto via PowerShell ou terminal:
+
 streamlit run app.py
 
-📊 Fonte dos Dados
 
-Os dados utilizados neste projeto são públicos e foram obtidos a partir do seguinte repositório:
+Após o comando, o Streamlit abrirá automaticamente o dashboard no navegador.
 
-Dataset de salários na área de dados
-(utilizado apenas para fins educacionais e analíticos)
+📊 Funcionalidades do Dashboard
 
-🧠 Aprendizados e Conceitos Aplicados
+📌 Filtros interativos por ano, cargo e outros critérios
+
+📈 Gráficos de tendência salarial
+
+📦 Boxplot de distribuição salarial por cargo
+
+🌍 Análise salarial por país
+
+📊 Métricas resumidas (KPIs)
+
+📋 Visualização tabular dos dados filtrados
+
+📂 Estrutura do Projeto
+├── app.py              # Código principal do dashboard
+├── requirements.txt    # Lista de dependências
+└── README.md           # Documentação do projeto
+
+🧠 Conceitos Aplicados
+
+Ambientes virtuais em Python
 
 Análise exploratória de dados (EDA)
 
-Uso de filtros interativos em dashboards
+Visualização de dados interativa
 
-Escolha adequada de gráficos para diferentes tipos de análise
+Boas práticas de organização de projeto
 
-Tratamento de dados vazios e exceções
+Uso profissional do Streamlit
 
-Organização e legibilidade de código em projetos Python
+🚀 Possíveis Evoluções
 
-🚀 Próximos Passos (Ideias de Evolução)
+Deploy no Streamlit Cloud
 
-Comparação salarial entre trabalho remoto e presencial
+Comparação entre trabalho remoto, híbrido e presencial
 
-Análise de senioridade ao longo do tempo
+Análise por senioridade ao longo do tempo
 
-Deploy do projeto no Streamlit Cloud
-
-Criação de insights automáticos no dashboard
-
-Inclusão de testes e validações de dados
+Inclusão de insights automáticos no dashboard
 
 👤 Autor
 
 Projeto desenvolvido por Felipe Soares
-📌 Área de interesse: Dados, Tecnologia e Análise de Informação
+📌 Interesse em Dados, Tecnologia e Análise de Informação
